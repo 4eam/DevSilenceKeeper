@@ -10,3 +10,5 @@
 ##### Murphy - <a href = "https://t.me/murphy_dev">Telegram</a>, <a href = "https://github.com/murphy-dev">GitHub</a>.
 
 ##### ExplodingBanana - <a href = "https://t.me/kookooker">Telegram</a>, <a href = "https://github.com/ExplodingBanana">GitHub</a>.
+
+##### Grigoriy Betsan - <a href = "https://t.me/grig191">Telegram</a>, <a href = "https://github.com/grig191">GitHub</a>.
