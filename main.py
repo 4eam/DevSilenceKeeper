@@ -34,10 +34,16 @@ def is_admin(message):
 
 
 def reply_and_kick(message):
+    first_name = message.from_user.first_name
+    last_name = message.from_user.last_name
+    username = message.from_user.username
     text = 'Пользователь '
-    text += message.from_user.first_name + ' '
-    text += message.from_user.last_name + ' '
-    text += '(@' + message.from_user.username + ') '
+    if first_name is not None:
+        text += message.from_user.first_name + ' '
+    if last_name is not None:
+        text += message.from_user.last_name + ' '
+    if username is not None:
+        text += '(@' + message.from_user.username + ') '
     text += 'нарушил второе правило чата!'
     bot.reply_to(message, text)
     bot.delete_message(message.chat.id, message.message_id)
