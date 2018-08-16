@@ -13,8 +13,8 @@ def init_banlist():
 init_banlist()
 print('Banlist loaded...')
 bot = telebot.TeleBot(keys.TOKEN)
-print('Signal with bot API established...')
-print('Telegram bot is works...')
+print('Signal with Telegram Bot API is established...')
+print('Telegram bot is working...')
 
 
 def get_command_params(message_content):
