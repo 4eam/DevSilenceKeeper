@@ -63,7 +63,7 @@ def remove_blocked_template(template):
     banlist_file = open(settings.BANLIST_FILE, 'w+')
     file_content = banlist_file.readlines()
     for line in file_content:
-        line = str(line).replace(template, '')
+        str(line).replace(template, '')
     banlist_file.writelines(file_content)
     settings.BLOCKED_WORD_LIST.remove(template)
     banlist_file.close()
@@ -88,13 +88,13 @@ def is_message_dangerous(message_content):
 @bot.message_handler(commands=['help'])
 def show_help(message):
     if is_admin(message):
-        answer_text = 'Я знаю следующие команды:'
-        answer_text += '\n/help — получить справку команд'
-        answer_text += '\n/showbanlist — показать список строк-шаблонов в банлисте'
-        answer_text += '\n/add {строка-шаблон} — добавить строку-шаблон в банлист'
-        answer_text += '\n/remove {строка-шаблон} — удалить строку-шаблон из банлиста'
-        answer_text += '\n/bugreport {текст проблемы} — послать разработчиков на... Кхм.. Сообщить об ошибке разработчикам'
-        answer_text += '\n\nВсе команды могут использовать только админы чата!'
+        answer_text = ('Я знаю следующие команды:'
+                       + '\n/help — получить справку команд'
+                       + '\n/showbanlist — показать список строк-шаблонов в банлисте'
+                       + '\n/add {строка-шаблон} — добавить строку-шаблон в банлист'
+                       + '\n/remove {строка-шаблон} — удалить строку-шаблон из банлиста'
+                       + '\n/bugreport {текст проблемы} — послать разработчиков на... Кхм.. Сообщить об ошибке разработчикам'
+                       + '\n\nВсе команды могут использовать только админы чата!')
         bot.send_message(message.chat.id, answer_text)
 
 
